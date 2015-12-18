@@ -14,7 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
   api.addFiles('opencpu.js');
-  api.addFiles('lib/opencpu-0.4.js');
+  api.addFiles(['lib/opencpu-0.4.js', 'lib/jquery-1.11.1.min.js']);
   api.export(['ocpu']);
 });
 
@@ -23,7 +23,7 @@ Package.onTest(function(api) {
   api.use('tinytest');
   api.use('srmelody:opencpu');
   api.addFiles('opencpu-tests.js');
-  api.addFiles('lib/opencpu-0.4.js');
+  api.addFiles(['lib/opencpu-0.4.js', 'lib/jquery-1.11.1.min.js']);
   api.export(['ocpu']);
 
 
