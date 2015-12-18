@@ -1,6 +1,6 @@
 Package.describe({
   name: 'srmelody:opencpu',
-  version: '0.0.2',
+  version: '0.0.3',
   // Brief, one-line summary of the package.
   summary: 'Meteor support for opencpu to run R functions',
   // URL to the Git repository containing the source code for this package.
@@ -14,8 +14,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
   api.addFiles('opencpu.js');
-  api.addFiles(['lib/opencpu-0.4.js', 'lib/jquery-1.11.1.min.js']);
-  api.export(['ocpu']);
+  api.addFiles(['lib/opencpu-0.4.js', 'lib/jquery-1.11.1.min.js'], 'client');
+  api.export(['ocpu'],'client');
 });
 
 Package.onTest(function(api) {
@@ -23,8 +23,7 @@ Package.onTest(function(api) {
   api.use('tinytest');
   api.use('srmelody:opencpu');
   api.addFiles('opencpu-tests.js');
-  api.addFiles(['lib/opencpu-0.4.js', 'lib/jquery-1.11.1.min.js']);
-  api.export(['ocpu']);
-
+  api.addFiles(['lib/opencpu-0.4.js', 'lib/jquery-1.11.1.min.js'], 'client');
+  api.export(['ocpu'],'client');
 
 });
