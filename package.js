@@ -1,6 +1,6 @@
 Package.describe({
   name: 'srmelody:opencpu',
-  version: '0.0.5',
+  version: '0.0.6',
   // Brief, one-line summary of the package.
   summary: 'Meteor support for opencpu to run R functions',
   // URL to the Git repository containing the source code for this package.
